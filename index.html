@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Meteo App</title>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <div class="weather-app-city-time">
+            <h1 class="weather-app-city" id="city"></h1>
+            <p class="weather-app-time" id="time"></p>
+          </div>
+          <div class="weather-app-details">
+            <div class="weather-app-temperature-container">
+              <div id="icon"></div>
+              <div class="weather-app-temperature" id="temperature"></div>
+              <div class="weather-app-unit">°C</div>
+            </div>
+            <p id="description" class="weather-app-description"></p>
+          </div>
+        </div>
+        <div class="weather-app-stats-container">
+          <div class="weather-app-stats">
+            <p>Humidity: <strong id="humidity"></strong></p>
+          </div>
+          <div class="weather-app-stats">
+            <p>Wind: <strong id="wind-speed"></strong></p>
+          </div>
+        </div>
+        <div class="weather-forecast" id="forecast"></div>
+      </main>
+
+      <footer>
+        This project was coded by
+        <a href="https://github.com/chirukaa" target="_blank"> Tanaka Chiruka</a>,
+        is
+        <a href="#" target="_blank">open-sourced on GitHub</a>
+        and
+        <a href="#" target="_blank">hosted on Netlify</a>.
+      </footer>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
+
